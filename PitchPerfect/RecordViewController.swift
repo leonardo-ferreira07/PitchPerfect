@@ -17,7 +17,8 @@ class RecordViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        
+        stopButton.isEnabled = false
     }
 
     override func didReceiveMemoryWarning() {
@@ -29,10 +30,14 @@ class RecordViewController: UIViewController {
     
     @IBAction func recordButtonPressed(_ sender: UIButton) {
         recordingLabel.text = "Recording in progress"
+        recordButton.isEnabled = false
+        stopButton.isEnabled = true
     }
     
     @IBAction func stopButtonPressed(_ sender: UIButton) {
         recordingLabel.text = "Tap to record"
+        recordButton.isEnabled = true
+        stopButton.isEnabled = false
     }
     
     
