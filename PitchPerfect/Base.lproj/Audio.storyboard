@@ -21,35 +21,36 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fz4-es-Srs">
-                                <rect key="frame" x="110.5" y="256" width="155" height="155"/>
-                                <state key="normal" image="Record"/>
-                                <connections>
-                                    <action selector="recordButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="2mw-FO-c9z"/>
-                                </connections>
-                            </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tap to record" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bzW-WB-0CA">
-                                <rect key="frame" x="137" y="441" width="102" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1kF-gr-N6K">
-                                <rect key="frame" x="111" y="492" width="155" height="155"/>
-                                <state key="normal" image="Stop"/>
-                                <connections>
-                                    <action selector="stopButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="eCH-gT-3Bx"/>
-                                </connections>
-                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="ma2-mU-C8E">
+                                <rect key="frame" x="110" y="160.5" width="155" height="346.5"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fz4-es-Srs">
+                                        <rect key="frame" x="0.0" y="0.0" width="155" height="155"/>
+                                        <state key="normal" image="Record"/>
+                                        <connections>
+                                            <action selector="recordButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="2mw-FO-c9z"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tap to record" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bzW-WB-0CA">
+                                        <rect key="frame" x="26.5" y="163" width="102" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1kF-gr-N6K">
+                                        <rect key="frame" x="0.0" y="191.5" width="155" height="155"/>
+                                        <state key="normal" image="Stop"/>
+                                        <connections>
+                                            <action selector="stopButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="eCH-gT-3Bx"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="bzW-WB-0CA" firstAttribute="top" secondItem="Fz4-es-Srs" secondAttribute="bottom" constant="30" id="1W9-ba-MQW"/>
-                            <constraint firstItem="1kF-gr-N6K" firstAttribute="centerX" secondItem="Fz4-es-Srs" secondAttribute="centerX" id="Phf-n8-p3O"/>
-                            <constraint firstItem="bzW-WB-0CA" firstAttribute="centerX" secondItem="Fz4-es-Srs" secondAttribute="centerX" id="Vbi-4e-UKc"/>
-                            <constraint firstItem="Fz4-es-Srs" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="ZdF-IA-YAC"/>
-                            <constraint firstItem="Fz4-es-Srs" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="qCp-rQ-cSB"/>
-                            <constraint firstItem="1kF-gr-N6K" firstAttribute="top" secondItem="bzW-WB-0CA" secondAttribute="bottom" constant="30" id="vZG-om-o9T"/>
+                            <constraint firstItem="ma2-mU-C8E" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="FrE-tN-3Je"/>
+                            <constraint firstItem="ma2-mU-C8E" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Rvr-e7-nie"/>
                         </constraints>
                     </view>
                     <connections>
