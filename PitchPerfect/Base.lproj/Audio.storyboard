@@ -22,7 +22,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="ma2-mU-C8E">
-                                <rect key="frame" x="110" y="160.5" width="155" height="346.5"/>
+                                <rect key="frame" x="110" y="206" width="155" height="255.5"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fz4-es-Srs">
                                         <rect key="frame" x="0.0" y="0.0" width="155" height="155"/>
@@ -38,7 +38,11 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1kF-gr-N6K">
-                                        <rect key="frame" x="0.0" y="191.5" width="155" height="155"/>
+                                        <rect key="frame" x="45.5" y="191.5" width="64" height="64"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="64" id="2jC-Jn-uCP"/>
+                                            <constraint firstAttribute="width" constant="64" id="y0h-tY-fzb"/>
+                                        </constraints>
                                         <state key="normal" image="Stop"/>
                                         <connections>
                                             <action selector="stopButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="eCH-gT-3Bx"/>
