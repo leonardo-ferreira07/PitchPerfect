@@ -19,7 +19,7 @@ class RecordViewController: UIViewController, AVAudioRecorderDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        stopButton.isEnabled = false
+        configUI(isRecording: false)
     }
 
     override func didReceiveMemoryWarning() {
@@ -40,17 +40,13 @@ class RecordViewController: UIViewController, AVAudioRecorderDelegate {
     // MARK: - Actions
     
     @IBAction func recordButtonPressed(_ sender: UIButton) {
-        recordingLabel.text = "Recording in progress"
-        recordButton.isEnabled = false
-        stopButton.isEnabled = true
+        configUI(isRecording: true)
         
         AudioSessionHelper.recordAudio(with: self)
     }
     
     @IBAction func stopButtonPressed(_ sender: UIButton) {
-        recordingLabel.text = "Tap to record"
-        recordButton.isEnabled = true
-        stopButton.isEnabled = false
+        configUI(isRecording: false)
         
         AudioSessionHelper.stopRecordAudio()
     }
@@ -73,5 +69,21 @@ extension RecordViewController {
         }
     }
     
+}
+
+// MARK: - UI methods
+
+extension RecordViewController {
+    func configUI(isRecording: Bool) {
+        if isRecording {
+            recordingLabel.text = "Recording in progress"
+            recordButton.isEnabled = false
+            stopButton.isEnabled = true
+        } else {
+            recordingLabel.text = "Tap to record"
+            recordButton.isEnabled = true
+            stopButton.isEnabled = false
+        }
+    }
 }
 
