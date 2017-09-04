@@ -14,7 +14,7 @@
 		A73897A51F5D969200A3C0CD /* RecordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A738979F1F5D969200A3C0CD /* RecordViewController.swift */; };
 		A73897A61F5D969200A3C0CD /* PlaySoundsViewController+Audio.swift in Sources */ = {isa = PBXBuildFile; fileRef = A73897A11F5D969200A3C0CD /* PlaySoundsViewController+Audio.swift */; };
 		A77EB4491F5ABE0A00D1B9BD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A77EB4481F5ABE0A00D1B9BD /* AppDelegate.swift */; };
-		A7CEE5801F5D98F9003AAFCB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A7CEE57F1F5D98F9003AAFCB /* Assets.xcassets */; };
+		A7CEE5821F5D9974003AAFCB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A7CEE5811F5D9974003AAFCB /* Assets.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,7 +27,7 @@
 		A77EB4451F5ABE0A00D1B9BD /* PitchPerfect.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PitchPerfect.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A77EB4481F5ABE0A00D1B9BD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A77EB4541F5ABE0A00D1B9BD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		A7CEE57F1F5D98F9003AAFCB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		A7CEE5811F5D9974003AAFCB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +53,7 @@
 		A73897981F5D969200A3C0CD /* Assets */ = {
 			isa = PBXGroup;
 			children = (
+				A7CEE5811F5D9974003AAFCB /* Assets.xcassets */,
 			);
 			path = Assets;
 			sourceTree = "<group>";
@@ -110,7 +111,6 @@
 		A77EB4471F5ABE0A00D1B9BD /* PitchPerfect */ = {
 			isa = PBXGroup;
 			children = (
-				A7CEE57F1F5D98F9003AAFCB /* Assets.xcassets */,
 				A73897981F5D969200A3C0CD /* Assets */,
 				A738979A1F5D969200A3C0CD /* Helpers */,
 				A738979C1F5D969200A3C0CD /* View */,
@@ -181,7 +181,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A73897961F5D95F100A3C0CD /* LaunchScreen.storyboard in Resources */,
-				A7CEE5801F5D98F9003AAFCB /* Assets.xcassets in Resources */,
+				A7CEE5821F5D9974003AAFCB /* Assets.xcassets in Resources */,
 				A73897951F5D95F100A3C0CD /* Audio.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
