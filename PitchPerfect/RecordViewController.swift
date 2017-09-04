@@ -54,7 +54,13 @@ class RecordViewController: UIViewController, AVAudioRecorderDelegate {
 extension RecordViewController {
     
     func audioRecorderDidFinishRecording(_ recorder: AVAudioRecorder, successfully flag: Bool) {
-        performSegue(withIdentifier: "stopRecording", sender: nil)
+        if flag {
+            performSegue(withIdentifier: "stopRecording", sender: recorder.url)
+        } else {
+            let alert = UIAlertController(title: "Error when saving your audio file", message: nil, preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "Ok", style: .cancel, handler: nil))
+            present(alert, animated: true, completion: nil)
+        }
     }
     
 }
