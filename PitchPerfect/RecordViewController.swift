@@ -26,6 +26,16 @@ class RecordViewController: UIViewController, AVAudioRecorderDelegate {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    // MARK: - Segue
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let destination = segue.destination as? PlaySoundsViewController {
+            if let audioURL = sender as? URL {
+                destination.recordedAudioURL = audioURL
+            }
+        }
+    }
 
     // MARK: - Actions
     
