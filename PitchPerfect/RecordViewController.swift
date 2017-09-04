@@ -7,8 +7,9 @@
 //
 
 import UIKit
+import AVFoundation
 
-class RecordViewController: UIViewController {
+class RecordViewController: UIViewController, AVAudioRecorderDelegate {
 
     @IBOutlet weak var recordingLabel: UILabel!
     @IBOutlet weak var recordButton: UIButton!
@@ -32,15 +33,29 @@ class RecordViewController: UIViewController {
         recordingLabel.text = "Recording in progress"
         recordButton.isEnabled = false
         stopButton.isEnabled = true
+        
+        AudioSessionHelper.recordAudio(with: self)
     }
     
     @IBAction func stopButtonPressed(_ sender: UIButton) {
         recordingLabel.text = "Tap to record"
         recordButton.isEnabled = true
         stopButton.isEnabled = false
+        
+        AudioSessionHelper.stopRecordAudio()
     }
     
     
 
+}
+
+// MARK: - Audio recorder delegate
+
+extension RecordViewController {
+    
+    func audioRecorderDidFinishRecording(_ recorder: AVAudioRecorder, successfully flag: Bool) {
+        performSegue(withIdentifier: "stopRecording", sender: nil)
+    }
+    
 }
 
