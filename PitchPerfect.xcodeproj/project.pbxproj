@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		A73897861F5D656A00A3C0CD /* AudioSessionHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = A73897851F5D656A00A3C0CD /* AudioSessionHelper.swift */; };
+		A73897881F5D6BD000A3C0CD /* PlaySoundsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A73897871F5D6BD000A3C0CD /* PlaySoundsViewController.swift */; };
 		A77EB4491F5ABE0A00D1B9BD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A77EB4481F5ABE0A00D1B9BD /* AppDelegate.swift */; };
 		A77EB44B1F5ABE0A00D1B9BD /* RecordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A77EB44A1F5ABE0A00D1B9BD /* RecordViewController.swift */; };
 		A77EB44E1F5ABE0A00D1B9BD /* Audio.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A77EB44C1F5ABE0A00D1B9BD /* Audio.storyboard */; };
@@ -17,6 +18,7 @@
 
 /* Begin PBXFileReference section */
 		A73897851F5D656A00A3C0CD /* AudioSessionHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AudioSessionHelper.swift; sourceTree = "<group>"; };
+		A73897871F5D6BD000A3C0CD /* PlaySoundsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlaySoundsViewController.swift; sourceTree = "<group>"; };
 		A77EB4451F5ABE0A00D1B9BD /* PitchPerfect.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PitchPerfect.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A77EB4481F5ABE0A00D1B9BD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A77EB44A1F5ABE0A00D1B9BD /* RecordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordViewController.swift; sourceTree = "<group>"; };
@@ -63,6 +65,7 @@
 				A77EB4511F5ABE0A00D1B9BD /* LaunchScreen.storyboard */,
 				A77EB4541F5ABE0A00D1B9BD /* Info.plist */,
 				A73897851F5D656A00A3C0CD /* AudioSessionHelper.swift */,
+				A73897871F5D6BD000A3C0CD /* PlaySoundsViewController.swift */,
 			);
 			path = PitchPerfect;
 			sourceTree = "<group>";
@@ -141,6 +144,7 @@
 			files = (
 				A73897861F5D656A00A3C0CD /* AudioSessionHelper.swift in Sources */,
 				A77EB44B1F5ABE0A00D1B9BD /* RecordViewController.swift in Sources */,
+				A73897881F5D6BD000A3C0CD /* PlaySoundsViewController.swift in Sources */,
 				A77EB4491F5ABE0A00D1B9BD /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
