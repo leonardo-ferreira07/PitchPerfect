@@ -81,6 +81,5 @@ extension PlaySoundsViewController {
         vaderButton.imageView?.contentMode = .scaleAspectFit
         echoButton.imageView?.contentMode = .scaleAspectFit
         reverbButton.imageView?.contentMode = .scaleAspectFit
-        stopButton.imageView?.contentMode = .scaleAspectFit
     }
 }
