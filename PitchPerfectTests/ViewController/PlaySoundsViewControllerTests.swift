@@ -11,9 +11,15 @@ import XCTest
 
 class PlaySoundsViewControllerTests: XCTestCase {
     
+    var sut: PlaySoundsViewController!
+    
     override func setUp() {
         super.setUp()
-        // Put setup code here. This method is called before the invocation of each test method in the class.
+        
+        let storyboard = UIStoryboard(name: "Audio", bundle: nil)
+        sut = storyboard.instantiateViewController(withIdentifier: "PlaySoundsViewController") as! PlaySoundsViewController
+        sut.recordedAudioURL = URL(string: "mockURL")!
+        _ = sut.view
     }
     
     override func tearDown() {
@@ -28,6 +34,16 @@ class PlaySoundsViewControllerTests: XCTestCase {
         XCTAssertTrue(vc.setupAudioCalled)
     }
     
+    func test_UIElements_AreCorrectlyInstantiated_AfterInit() {
+        XCTAssertNotNil(sut.chipmunkButton)
+        XCTAssertNotNil(sut.echoButton)
+        XCTAssertNotNil(sut.stopButton)
+        XCTAssertNotNil(sut.vaderButton)
+        XCTAssertNotNil(sut.reverbButton)
+        XCTAssertNotNil(sut.snailButton)
+        XCTAssertNotNil(sut.rabbitButton)
+    }
+    
 }
 
 // MARK: - Mock classes
@@ -40,5 +56,6 @@ extension PlaySoundsViewControllerTests {
         override func setupAudio() {
             setupAudioCalled = true
         }
+        
     }
 }
