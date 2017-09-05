@@ -9,11 +9,11 @@
 import UIKit
 import AVFoundation
 
-enum ButtonType: Int {
-    case slow = 0, fast, chipmunk, vader, echo, reverb
-}
-
 class PlaySoundsViewController: UIViewController {
+    
+    enum ButtonType: Int {
+        case slow = 0, fast, chipmunk, vader, echo, reverb
+    }
     
     @IBOutlet weak var snailButton: UIButton!
     @IBOutlet weak var chipmunkButton: UIButton!
@@ -33,17 +33,13 @@ class PlaySoundsViewController: UIViewController {
         super.viewDidLoad()
 
         setupAudio()
+        adjustButtonsContentMode()
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
         configureUI(.notPlaying)
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
     
     // MARK: Actions
@@ -73,4 +69,18 @@ class PlaySoundsViewController: UIViewController {
         stopAudio()
     }
 
+}
+
+// MARK: - UI Methods 
+
+extension PlaySoundsViewController {
+    func adjustButtonsContentMode() {
+        snailButton.imageView?.contentMode = .scaleAspectFit
+        chipmunkButton.imageView?.contentMode = .scaleAspectFit
+        rabbitButton.imageView?.contentMode = .scaleAspectFit
+        vaderButton.imageView?.contentMode = .scaleAspectFit
+        echoButton.imageView?.contentMode = .scaleAspectFit
+        reverbButton.imageView?.contentMode = .scaleAspectFit
+        stopButton.imageView?.contentMode = .scaleAspectFit
+    }
 }
