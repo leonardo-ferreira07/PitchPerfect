@@ -24,7 +24,7 @@ struct AudioSessionHelper {
     static func recordAudio(with delegate: AVAudioRecorderDelegate) {
         
         let session = AVAudioSession.sharedInstance()
-        try! session.setCategory(AVAudioSessionCategoryPlayAndRecord, with:AVAudioSessionCategoryOptions.defaultToSpeaker)
+        try! session.setCategory(AVAudioSession.Category.playAndRecord, mode: .default, options: AVAudioSession.CategoryOptions.defaultToSpeaker)
         
         try! audioRecorder = AVAudioRecorder(url: filePath(), settings: [:])
         audioRecorder.delegate = delegate
